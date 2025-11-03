@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Fun Run — Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Community Fun Run — Registration</h1>
+
+    <form id="regForm">
+      <label>Full Name
+        <input id="fullName" name="fullName" type="text" placeholder="Enter your name" />
+      </label>
+      <div class="error" id="err-fullName"></div>
+
+      <label>Email
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+      </label>
+      <div class="error" id="err-email"></div>
+
+      <label>Phone
+        <input id="phone" name="phone" type="text" placeholder="10-digit phone number" />
+      </label>
+      <div class="error" id="err-phone"></div>
+
+      <label>Age
+        <input id="age" name="age" type="number" placeholder="Enter your age" />
+      </label>
+      <div class="error" id="err-age"></div>
+
+      <label>Distance
+        <select id="distance" name="distance">
+          <option value="">-- Select Distance --</option>
+          <option value="5K">5K</option>
+          <option value="10K">10K</option>
+        </select>
+      </label>
+      <div class="error" id="err-distance"></div>
+
+      <label>Estimated Pace (min/km)
+        <input id="estimatedPace" name="estimatedPace" type="number" step="0.1" placeholder="e.g., 6.5" />
+      </label>
+      <div class="error" id="err-pace"></div>
+
+      <label>T-shirt Size
+        <select id="tShirtSize" name="tShirtSize">
+          <option value="">-- Select Size --</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+      <div class="error" id="err-shirt"></div>
+
+      <label class="checkbox">
+        <input id="isStudent" name="isStudent" type="checkbox" />
+        I am a student (must be 18+)
+      </label>
+
+      <button type="submit" onclick="registerFunRun(event)">Register</button>
+    </form>
+
+    <section id="result"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
